@@ -1,0 +1,57 @@
+groups:
+  - name: "Group 1"
+    students:
+      - name: "Ivan Petrov"
+        id: 101
+        subject: "Mathematics"
+      - name: "Maria Ivanova"
+        id: 102
+        subject: "Physics"
+  - name: "Group 2"
+    students:
+      - name: "Alexey Smirnov"
+        id: 103
+        subject: "Chemistry"
+      - name: "Olga Sidorova"
+        id: 104
+        subject: "Biology"
+  - name: "Group 3"
+    students:
+      - name: "Dmitry Kuznetsov"
+        id: 105
+        subject: "History"
+      - name: "Elena Petukhova"
+        id: 106
+        subject: "Geography"
+  - name: "Group 4"
+    students:
+      - name: "Nikolai Orlov"
+        id: 107
+        subject: "Computer Science"
+      - name: "Irina Karpova"
+        id: 108
+        subject: "Literature"
+  - name: "Group 5"
+    students:
+      - name: "Andrey Morozov"
+        id: 109
+        subject: "Physics"
+      - name: "Yulia Alexandrova"
+        id: 110
+        subject: "Mathematics"
+  - name: "Group 6"
+    students:
+      - name: "Sergey Petrov"
+        id: 111
+        subject: "Chemistry"
+      - name: "Tatyana Vasilieva"
+        id: 112
+        subject: "History"
+  - name: "Group 7"
+    students:
+      - name: "Vladimir Kirillov"
+        id: 113
+        subject: "Biology"
+      - name: "Anastasia Mikhailova"
+        id: 114
+        subject: "Geography"
