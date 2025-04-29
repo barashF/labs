@@ -1,3 +1,5 @@
+from pprint import pprint
+
 class YamlParser:
     class Node:
         def __init__(self, indent, parent=None):
@@ -39,6 +41,7 @@ class YamlParser:
 
         return self.root.data if self.root else {}
 
+    #о господи как же есть хочу, за что мне это все
     def _init_root(self, first_line, indent):
         if first_line.startswith('- '):
             self.root = self.Node(indent)
@@ -130,7 +133,8 @@ class YamlParser:
         return f'"{value}"' if ' ' in value else value
 
 converter = YamlParser()
-print(converter.load("C:/Users/artem/Desktop\PDF-Parser/2.yml"))
-d = {'router': {'hostname': 'CiscoRouter1', 'interfaces': {'GigabitEthernet0/0': {'ip_address': '192.168.1.1', 'subnet_mask': '255.255.255.0', 'description': 'WAN Interface', 'status': 'up', 'mtu': 1500, 'GigabitEthernet0/1': {'ip_address': '192.168.2.1', 'subnet_mask': '255.255.255.0', 'description': 'LAN Interface', 'status': 'up', 'mtu': 1500}}, 'routing': {'static_routes': {'route1': {'destination_network': '0.0.0.0', 'subnet_mask': '0.0.0.0', 'next_hop': '192.168.1.254', 'route2': {'destination_network': '10.0.0.0', 'subnet_mask': '255.0.0.0', 'next_hop': '192.168.1.254'}}}}, 'dns': {'servers': {'primary': '8.8.8.8', 'secondary': '8.8.4.4'}}, 'access_lists': {'ACL_inbound': {'type': 'inbound', 'rules': {'rule1': {'action': 'permit', 'protocol': 'ip', 'source': 'any', 'destination': 'any', 'rule2': {'action': 'deny', 'protocol': 'ip', 'source': 'any', 
-'destination': 'any'}}}}}}}}
-converter.save(d, "C:/Users/artem/Desktop/PDF-Parser/test.yml")
+print(converter.load("./2.yml"))
+d = {'router': {'hostname': 'CiscoRouter1', 'interfaces': {'GigabitEthernet0/0': {'ip_address': '192.168.1.1', 'subnet_mask': '255.255.255.0', 'description': 'WAN Interface', 'status': 'up', 'mtu': 1500, 'GigabitEthernet0/1': {'ip_address': '192.168.2.1', 'subnet_mask': '255.255.255.0', 'description': 'LAN Interface', 'status': 'up', 'mtu': 1500}}, 'routing': {'static_routes': {'route1': {'destination_network': '0.0.0.0', 'subnet_mask': '0.0.0.0', 'next_hop': '192.168.1.254', 'route2': {'destination_network': '10.0.0.0', 'subnet_mask': '255.0.0.0', 'next_hop': '192.168.1.254'}}}}, 'dns': {'servers': {'primary': '8.8.8.8', 'secondary': '8.8.4.4'}}, 'access_lists': {'ACL_inbound': {'type': 'inbound', 'rules': {'rule1': {'action': 'permit', 'protocol': 'ip', 'source': 'any', 'destination': 'any', 'rule2': {'action': 'deny', 'protocol': 'ip', 'source': 'any', 'destination': 'any'}}}}}}}}
+     
+converter.save(d, './test.yml')
+
