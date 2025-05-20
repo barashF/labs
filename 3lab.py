@@ -79,3 +79,53 @@ def merge_alternate(list1, list2):
             current2 = current2.next
     return merged
 
+
+if __name__ == "__main__":
+    print("Демонстрация работы методов LinkedList:")
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(2)
+    ll.append(3)
+    ll.prepend(0)
+    print("После добавления в начало и конец:")
+    ll.print_list()  
+
+    ll.insert(2, 1.5)
+    print("После вставки 1.5 по индексу 2:")
+    ll.print_list() 
+
+    ll.delete(1.5)
+    print("После удаления 1.5:")
+    ll.print_list()  
+
+    print("Индекс значения 2:", ll.find(2))  
+    print("Индекс несуществующего значения 5:", ll.find(5))  
+
+    list1 = LinkedList()
+    list1.append(1)
+    list1.append(3)
+    list1.append(5)
+
+    list2 = LinkedList()
+    list2.append(2)
+    list2.append(4)
+    list2.append(6)
+
+    merged = merge_alternate(list1, list2)
+    print("\nРезультат слияния списков list1 и list2:")
+    merged.print_list()  # 1 -> 2 -> 3 -> 4 -> 5 -> 6
+
+    list3 = LinkedList()
+    list3.append(1)
+    list3.append(3)
+    list3.append(5)
+    list3.append(7)
+    list3.append(9)
+
+    list4 = LinkedList()
+    list4.append(2)
+    list4.append(4)
+
+    merged2 = merge_alternate(list3, list4)
+    print("\nРезультат слияния списков разной длины:")
+    merged2.print_list()
